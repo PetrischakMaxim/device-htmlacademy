@@ -1,0 +1,202 @@
+@import "_options";
+
+/* Base settings */
+a {
+	font: 300 15px/2 @font_opensans;
+	text-decoration: none;
+	color: @base_color;
+	._trs(all,0.3s,ease-in);
+	&:hover {
+		color: lighten(@base_color, 20%);
+	}
+	&:active {
+		color: fade(@base_color, 60%);
+	}
+}
+
+ul,li {
+	list-style: none;
+}
+
+.hidden {
+	display: none;
+}
+
+body {
+	font: 300 15px/2 @font_opensans;
+	background: @light_color;
+	color: @base_color;
+}
+
+.thin-btn {
+	position: relative;
+	padding: 10px 45px;
+	font: 900 18px/1.3 @font_gilroy;
+	text-align: center;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	._trs();
+	&::after {
+		position: absolute;
+		z-index: -1;
+		left: 0;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		content:"";
+		width: 100%;
+		height: 8px;
+		background: darken(@base_bg,5%);
+		._trs();
+	}
+	&:hover {
+		&::after {
+			height: 100%;
+		}
+	}
+	&:active {
+		opacity: @opacity;
+		&::after {
+			height: 100%;
+		}
+	}
+
+	&.active {
+		background: @base_color;
+		color: @base_bg;
+		&:active {
+		opacity: 1;
+			&::after {
+				height: 100%;
+			}
+		}
+	}
+}
+
+.page-title {
+	font: 900 48px/1.2 @font_gilroy;
+}
+/****************/
+
+/* Header */
+
+.page-header {
+	background: @base_bg;
+}
+
+.page-logo {
+	font: 900 48px/1 @font_gilroy;
+	&--colored {
+		color: @base_bg;
+		&:hover {
+			color: lighten(@base_bg, 10%);
+		}
+		&:active {
+			color: fade(@base_bg, 60%);
+		}
+	}
+}
+
+.site-catalog p {
+	font: 900 18px/1.3 @font_gilroy;
+}
+
+.product-catalog {
+	a {
+		line-height: 2.1;
+	}
+}
+
+.site-info-list {
+	a {
+		font: 900 18px/1.3 @font_gilroy;
+	}
+}
+
+/* SLider */
+.product-features {
+	text-align: center;
+	th {
+		font: 300 48px/1.33 @font_gilroy;
+	}
+}
+
+/* Products */
+
+.product {
+	width: 160px;
+	height: 160px;
+	background: @base_bg;
+	text-align: center;
+	._trs();
+
+	&:hover {
+		background: darken(@base_bg,25%);
+	}
+
+	&:active {
+		opacity: @opacity;
+	}
+
+	a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	figure {
+		padding: 0;
+		margin: 0;
+	}
+	.product-name {
+		font: 900 18px/1.3 @font_gilroy;
+	}
+	.icon {
+		max-width: 60%;
+	}
+}
+
+/* Services */
+
+/* Partners */
+.brands-list {
+	.brand-link {
+		filter: grayscale(1);
+		._trs();
+
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+}
+
+/* Info */
+.info-services {
+	li {
+		font: 900 14px/2 @font_gilroy;
+	}
+}
+
+/* Footer */
+.page-footer {
+	background: #464646;
+	color: @light_color;
+	.user-block,
+	.site-info  {
+		a {
+			color: @light_color;
+		}
+	}
+	.site-info  {
+		a {
+			font-family: @font_gilroy;
+			font-weight: bold;
+		}
+	}
+}
+
+/* Popup */
+.popup {
+	background: @light_color;
+}

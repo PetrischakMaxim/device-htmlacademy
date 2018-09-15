@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
     <title>DEVICE</title>
   </head>
   <body class="page">
@@ -30,9 +31,9 @@
             <li><a href="#" class="user-compare-link">Сравнить</a></li>
             <li><a href="#" class="user-cart">Корзина</a></li>
           </ul>
-          <ul class="site-navigation">
-            <li>
-              Каталог товаров
+          <nav class="site-navigation">
+            <div class="site-catalog">
+              <p>Каталог товаров</p>
               <ul class="product-catalog">
                 <li><a href="#">Виртуальная реальность   </a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
@@ -41,16 +42,16 @@
                 <li><a href="#">Умные часы</a></li>
                 <li><a href="#">Квадрокоптеры</a></li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div class="site-info-list">
               <span class="hidden">О нас</span>
               <ul class="site-info">
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Гарантия</a></li>
                 <li><a href="#">Контакты</a></li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </nav>
         </div>
       </nav>
     </header>
@@ -64,12 +65,12 @@
           <li class="product-item">
             <img class="product-pic" src="img/slider/slider-1.png" alt=""  width="344" height="486">
             <article class="product-content">
-              <h4 class="product-slogan">Делай селфи,как Бен Стиллер!</h4>
+              <h4 class="product-slogan page-title">Делай селфи,<br>как Бен Стиллер!</h4>
               <p class="product-description">
                 Самая длинная палка для селфи доступна в нашем магазине.
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
-              <button class="details-button">Подробнее</button>
+              <button class="details-button thin-btn">Подробнее</button>
               <table class="product-features">
                 <tr>
                   <th>8,5 м</th>
@@ -87,11 +88,11 @@
           <li class="product-item">
             <img class="product-pic" src="img/slider/slider-2.png" alt=""  width="345" height="485">
             <article class="product-content">
-              <h4 class="product-slogan">Худеем правильно!</h4>
+              <h4 class="product-slogan page-title">Худеем правильно!</h4>
               <p class="product-description">
                 Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
               </p>
-              <button class="details-button">Подробнее</button>
+              <button class="details-button thin-btn">Подробнее</button>
               <table class="product-features">
                 <tr>
                   <th>48 часов</th>
@@ -105,11 +106,11 @@
           <li class="product-item">
             <img class="product-pic" src="img/slider/slider-3.png" alt=""  width="526" height="334">
             <article class="product-content">
-              <h4 class="product-slogan">Порхает как бабочка, жалит как пчела!</h4>
+              <h4 class="product-slogan page-title">Порхает как бабочка, жалит как пчела!</h4>
               <p class="product-description">
                 Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
               </p>
-              <button class="details-button">Подробнее</button>
+              <button class="details-button thin-btn">Подробнее</button>
               <table class="product-features">
                 <tr>
                   <th>800 м</th>
@@ -134,11 +135,11 @@
           <li class="product">
             <a href="#">
               <figure>
-                <div class="product-picture">
+                
                   <svg class="icon">
                     <use xlink:href="#vr" />
                   </svg>
-                </div>
+                
                 <figcaption class="product-name">Виртуальная реальность</figcaption>
               </figure>
             </a>
@@ -146,11 +147,11 @@
           <li class="product">
             <a href="#">
               <figure>
-                <div class="product-picture">
+                
                   <svg class="icon">
                     <use xlink:href="#selfie-stick" />
                   </svg>
-                </div>
+                
                 <figcaption class="product-name">Моноподы для селфи</figcaption>
               </figure>
             </a>
@@ -158,11 +159,11 @@
           <li class="product">
             <a href="#">
               <figure>
-                <div class="product-picture">
+                
                   <svg class="icon">
                     <use xlink:href="#gopro" />
                   </svg>
-                </div>
+                
                 <figcaption class="product-name">Экшн-камеры</figcaption>
               </figure>
             </a>
@@ -170,11 +171,11 @@
           <li class="product">
             <a href="#">
               <figure>
-                <div class="product-picture">
+                
                   <svg class="icon">
                     <use xlink:href="#fitness-bracelet" />
                   </svg>
-                </div>
+                
                 <figcaption class="product-name">Фитнес-браслеты</figcaption>
               </figure>
             </a>
@@ -182,11 +183,11 @@
           <li class="product">
             <a href="#">
               <figure>
-                <div class="product-picture">
+                
                   <svg class="icon">
                     <use xlink:href="#apple-watch" />
                   </svg>
-                </div>
+                
                 <figcaption class="product-name">Умные часы</figcaption>
               </figure>
             </a>
@@ -194,11 +195,11 @@
           <li class="product">
             <a href="#">
               <figure>
-                <div class="product-picture">
+                
                   <svg class="icon">
                     <use xlink:href="#drone" />
                   </svg>
-                </div>
+                
                 <figcaption class="product-name">Квадрокоптеры</figcaption>
               </figure>
             </a>
@@ -211,30 +212,30 @@
         <h2 class="hidden">Наши услуги</h2>
         <ul class="services-links">
           <li>
-            <a href="#" class="service-link active">Доставка</a>
+            <a href="#" class="service-link active thin-btn">Доставка</a>
           </li>
           <li>
-            <a href="#" class="service-link">Гарантия</a>
+            <a href="#" class="service-link thin-btn">Гарантия</a>
           </li>
           <li>
-            <a href="#" class="service-link">Кредит</a>
+            <a href="#" class="service-link thin-btn">Кредит</a>
           </li>
         </ul>
         <ul class="service-info">
           <li class="service-content" data-content="delivery">
-            <h4 class="service-name">Доставка</h4>
+            <h4 class="service-name page-title">Доставка</h4>
             <p class="service-description">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
             </p>
           </li>
           <li class="service-content" data-content="warranty">
-            <h4 class="service-name">Гарантия</h4>
+            <h4 class="service-name page-title">Гарантия</h4>
             <p class="service-description">
               Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.Товар, не дом, конечно же.
             </p>
           </li>
           <li class="service-content" data-content="credit">
-            <h4 class="service-name">Кредит</h4>
+            <h4 class="service-name page-title">Кредит</h4>
             <p class="service-description">
               Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.
             </p>
@@ -272,7 +273,7 @@
     <section class="info-section">
       <h2 class="hidden">Информация о нас</h2>
       <article class="info-block info-block--about ">
-        <h4 class="info-title">О нас</h4>
+        <h4 class="info-title page-title">О нас</h4>
         <p>
           Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
         </p>
@@ -284,10 +285,10 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <button class="details-button">Подробнее о нас</button>
+        <button class="details-button thin-btn">Подробнее о нас</button>
       </article>
       <article class="info-block info-block--contacts ">
-        <h4 class="info-title">Контакты</h4>
+        <h4 class="info-title page-title">Контакты</h4>
         <p>
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
         </p>
@@ -300,7 +301,7 @@
         <a href="#" class="info-address-map map-link-trigger">
         <img src="img/page/map.jpg" width="560" height="222" alt="Карта проезда">
         </a>
-        <button class="details-button">Напишите нам</button>
+        <button class="details-button thin-btn">Напишите нам</button>
       </article>
     </section>
     <!-- END INFO -->
