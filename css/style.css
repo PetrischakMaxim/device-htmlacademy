@@ -503,3 +503,48 @@ body {
   background: #f7e296;
   border: none;
 }
+/* Catalog */
+.breadcrumbs-list a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #a4a4a4;
+}
+/* Filter */
+.filter-block {
+  background: #efefef;
+}
+.filter-header {
+  font: 900 14px/1.8 'gilroy', 'Arial', sans-serif;
+}
+.filter-form-field {
+  font: 900 18px/1.2 'gilroy', 'Arial', sans-serif;
+}
+.filter-form-option {
+  font: 300 14px/2.8 'gilroy', 'Arial', sans-serif;
+}
+/* Items section */
+.items-navigation .items-navigation-link {
+  font-size: 14px;
+  color: #a4a4a4;
+}
+.items-navigation .items-navigation-link.current,
+.items-navigation .items-navigation-link:hover {
+  color: #000;
+}
+.item-description {
+  font: 900 18px/1.2 'gilroy', 'Arial', sans-serif;
+}
+/* Pagination */
+.pagination-block {
+  background: #ebebeb;
+}
+.pagination-list .pagination-link {
+  color: #a4a4a4;
+  font: 900 16px/1.4 'gilroy', 'Arial', sans-serif;
+}
+.pagination-list .pagination-link.active,
+.pagination-list .pagination-link.pagination-link--prev,
+.pagination-list .pagination-link.pagination-link--next,
+.pagination-list .pagination-link:hover {
+  color: #000;
+}

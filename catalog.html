@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>DEVICE Каталог товаров</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page">
     <!-- HEADER -->
     <header class="page-header">
-      <h1 class="hidden">КАТАЛОГ ТОВАРОВ "DEVICE"</h1>
+      <h1 class="hidden">МАГАЗИН ТОВАРОВ "DEVICE"</h1>
       <nav class="main-navigation">
         <a href="#" class="page-logo" title="ЛОГОТИП">
         DEVICE
@@ -20,19 +21,45 @@
             <form class="search-form">
               <label class="search-form-label" for="#search-field">Поиск по сайту</label>
               <input class="search-form-input" id="#search-field" type="search" required>
-              <button class="form-btn" type="submit">Найти</button>
+              <button class="form-btn" type="submit">
+                Найти
+                <svg class="icon">
+                  <use xlink:href="#magnifier" />
+                </svg>
+              </button>
             </form>
           </div>
           <ul class="user-menu">
-            <li><a class="login-link" href="#">Войти</a></li>
+            <li>
+              <a class="login-link" href="#">
+                <svg class="icon">
+                  <use xlink:href="#user-silhouette" />
+                </svg>
+                Войти
+              </a>
+            </li>
           </ul>
           <ul class="user-menu user-menu--data">
-            <li><a href="#" class="user-compare-link">Сравнить</a></li>
-            <li><a href="#" class="user-cart">Корзина</a></li>
-          </ul>
-          <ul class="site-navigation">
             <li>
-              Каталог товаров
+              <a href="#" class="user-compare-link">
+                <svg class="icon">
+                  <use xlink:href="#bars-graphic" />
+                </svg>
+                Сравнить
+              </a>
+            </li>
+            <li>
+              <a href="#" class="user-cart">
+                <svg class="icon">
+                  <use xlink:href="#shopping-online" />
+                </svg>
+                Корзина
+              </a>
+            </li>
+          </ul>
+          <nav class="site-navigation">
+            <div class="site-catalog">
+              <p>Каталог товаров</p>
               <ul class="product-catalog">
                 <li><a href="#">Виртуальная реальность   </a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
@@ -41,16 +68,16 @@
                 <li><a href="#">Умные часы</a></li>
                 <li><a href="#">Квадрокоптеры</a></li>
               </ul>
-            </li>
-            <li>
+            </div>
+            <div class="site-info-list">
               <span class="hidden">О нас</span>
               <ul class="site-info">
                 <li><a href="#">Доставка</a></li>
                 <li><a href="#">Гарантия</a></li>
                 <li><a href="#">Контакты</a></li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </nav>
         </div>
       </nav>
     </header>
@@ -59,7 +86,7 @@
     <main class="page-main">
       <!-- CATALOG -->
       <section class="catalog-section">
-        <h2 class="catalog-title">Моноподы для селфи</h2>
+        <h2 class="catalog-title page-title">Моноподы для селфи</h2>
         <nav class="catalog-breadcrumbs">
           <ul class="breadcrumbs-list">
             <li><a class="breadcrumbs-link" href="index.html">Главная</a></li>
@@ -75,7 +102,7 @@
               <form action="#" class="filter-form">
                 <fieldset class="filter-form-field">
                   <b>Стоимость</b>
-                  <label for="filter-form-price">Фильтр стоимости</label>
+                  <label for="filter-form-price" class="hidden">Фильтр стоимости</label>
                   от 0 до 5000
                   <input type="range" class="filter-form-input" id="filter-form-price">
                 </fieldset>
@@ -113,14 +140,14 @@
                     <input name="radio-option" type="radio" class="filter-form-radio" id="radio-btn-no">
                   </p>
                 </fieldset>
-                <button type="submit" class="filter-btn">Показать</button>
+                <button type="submit" class="filter-btn thin-btn">Показать</button>
               </form>
             </div>
           </aside>
           <section class="items-section">
             <h2 class="hidden">Товары</h2>
             <nav class="items-navigation">
-              <b>Сортировка:</b>
+              <b class="filter-header">Сортировка:</b>
               <ul class="items-navigation-list">
                 <li><a href="#" class="items-navigation-link current">По цене</a></li>
                 <li><a href="#" class="items-navigation-link">По типу</a></li>
@@ -186,11 +213,11 @@
             <h2 class="hidden">Пагинатор по страницам</h2>
             <nav class="pagination-block">
               <ul class="pagination-list">
-                <li><a href="#" class="pagination-link">Назад</a></li>
-                <li><a href="#" class="pagination-link">1</a></li>
+                <li><a href="#" class="pagination-link pagination-link--prev">Назад</a></li>
+                <li><a href="#" class="pagination-link active">1</a></li>
                 <li><a href="#" class="pagination-link">2</a></li>
                 <li><a href="#" class="pagination-link">3</a></li>
-                <li><a href="#" class="pagination-link">Вперед</a></li>
+                <li><a href="#" class="pagination-link pagination-link--next">Вперед</a></li>
               </ul>
             </nav>
           </section>
@@ -200,7 +227,7 @@
     </main>
     <!-- MAIN -->
    
-    <!-- FOOTER -->
+        <!-- FOOTER -->
     <footer class="page-footer">
       <h2 class="hidden">Навигация по сайту</h2>
       <nav class="main-navigation">
@@ -209,11 +236,32 @@
         </a>
         <div class="user-block">
           <ul class="user-menu">
-            <li><a class="login-link" href="#">Войти</a></li>
+            <li>
+              <a class="login-link" href="#">
+                <svg class="icon">
+                  <use xlink:href="#user-silhouette" />
+                </svg>
+                Войти
+              </a>
+            </li>
           </ul>
           <ul class="user-menu user-menu--data">
-            <li><a href="#" class="user-compare-link">Сравнить</a></li>
-            <li><a href="#" class="user-cart">Корзина</a></li>
+            <li>
+              <a href="#" class="user-compare-link">
+                <svg class="icon">
+                  <use xlink:href="#bars-graphic" />
+                </svg>
+                Сравнить
+              </a>
+            </li>
+            <li>
+              <a href="#" class="user-cart">
+                <svg class="icon">
+                  <use xlink:href="#shopping-online" />
+                </svg>
+                Корзина
+              </a>
+            </li>
           </ul>
           <ul class="site-navigation">
             <li>
@@ -232,9 +280,24 @@
           <ul class="site-navigation">
             <li class="social-block">
               <span class="hidden">Мы с соц.сетях</span>
-              <a href="#" class="social-link" title="Мы на Facebook">Мы на Facebook</a>
-              <a href="#" class="social-link" title="Мы в Instagram">Мы в Instagram</a>
-              <a href="#" class="social-link" title="Мы в Twitter">Мы в  Twitter</a>
+              <a href="#" class="social-link" title="Мы на Facebook">
+                Мы на Facebook 
+                <svg class="icon">
+                  <use xlink:href="#facebook-logo-button" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" title="Мы в Instagram">
+                Мы в Instagram
+                <svg class="icon">
+                  <use xlink:href="#instagram-logo" />
+                </svg>
+              </a>
+              <a href="#" class="social-link" title="Мы в Twitter">
+                Мы в  Twitter
+                <svg class="icon">
+                  <use xlink:href="#twitter-logo-button" />
+                </svg>
+              </a>
             </li>
             <li class="partner-link">
               <a href="#" title="HTML Academy">HTML Academy</a>
