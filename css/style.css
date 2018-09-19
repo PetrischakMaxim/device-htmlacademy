@@ -334,6 +334,9 @@ a:hover {
 a:active {
   color: rgba(0, 0, 0, 0.6);
 }
+button {
+  cursor: pointer;
+}
 ul,
 li {
   list-style: none;
@@ -483,4 +486,20 @@ body {
 /* Popup */
 .popup {
   background: #ffffff;
+}
+.contact-form-label {
+  font: 900 18px 'gilroy', 'Arial', sans-serif;
+}
+.contact-form-input,
+.contact-form-textarea {
+  background: #f2f2f2;
+  border: none;
+  color: #adadad;
+  font-size: 14px;
+}
+.popup-btn {
+  width: 55px;
+  height: 55px;
+  background: #f7e296;
+  border: none;
 }
