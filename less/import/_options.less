@@ -15,3 +15,8 @@
 ._trs(@prop: all, @dur: 0.5s, @anim: ease-in-out) {
 	transition: @prop @dur @anim;
 }
+._placeholder(@color: @base_color) {
+	&::-webkit-input-placeholder {color:@color}
+	&::-moz-placeholder          {color:@color}
+	&:-ms-input-placeholder      {color:@color}
+}
