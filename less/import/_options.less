@@ -20,3 +20,10 @@
 	&::-moz-placeholder          {color:@color}
 	&:-ms-input-placeholder      {color:@color}
 }
+
+._flex(@display:flex, @dir:row, @wrap: nowrap, @just:space-between, @align: stretch){
+	display: @display;
+	flex-flow: @dir @wrap;
+	justify-content: @just;
+	align-items: @align;
+}

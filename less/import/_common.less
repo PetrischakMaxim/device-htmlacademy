@@ -19,6 +19,8 @@ button {
 }
 ul,li {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 ._placeholder(fade(@base_color,50%));
@@ -105,7 +107,7 @@ body {
 .page-logo {
 	position: relative;
 	bottom: 20px;
-	display: block;
+	display: inline-flex;
 	font: 900 48px/1 @font_gilroy;
 	&--colored {
 		color: @base_bg;
@@ -121,6 +123,7 @@ body {
 .user-block {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
 
 	.icon {
 		width: 16px;
@@ -129,12 +132,12 @@ body {
 }
 
 .search-form {
-	display: grid;
-	grid-template-columns: 50px  1fr;
-
+	position: relative;
+	display: flex;
 	.form-btn {
-		grid-column: 1;
-		grid-row: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
 		background-color: transparent;
 		border: none;
 		outline: none;
@@ -142,9 +145,10 @@ body {
 	}
 	.search-form-input {
 		font-size: 15px;
-		grid-column-start: 2;
+		padding-left: 30px;
 		background-color: transparent;
 		border: none;
+		._placeholder();
 	}
 
 	.search-form-label {
@@ -152,11 +156,54 @@ body {
 	}
 }
 
+.user-links {
+	display: flex;
+	justify-content: space-between;
+}
+.user-menu {
+	display: inline-flex;
+	flex: 2;
+
+	&--data {
+		flex: 1;
+		display: inline-flex;
+		justify-content: space-between;
+	}
+}
+
 .site-catalog p {
+	
+}
+
+.site-catalog-title {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
 	font: 900 18px/1.3 @font_gilroy;
+	margin-right: 30px; 
+	span {
+		display: block;
+		background: #b8a974;
+		height: 20px;
+		width: 3px;
+		position: relative;
+		left: 15px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			height: 3px;
+			width: 20px;
+			background: inherit;
+			right: 35%;
+			top: 50%;
+			transform: translate(50%, -50%);
+		}
+	}
 }
 
 .product-catalog {
+	display: none;
 	a {
 		line-height: 2.1;
 	}
@@ -166,6 +213,12 @@ body {
 	a {
 		font: 900 18px/1.3 @font_gilroy;
 	}
+}
+
+.site-info {
+	display: grid;
+	grid-template-columns: 1fr 2fr 0fr;
+
 }
 
 /* SLider */
