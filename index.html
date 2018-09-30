@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -92,11 +92,11 @@
       <!-- SLIDER -->
       <section class="slider-block">
           <h2 class="hidden">Популярные товары</h2>
-          <ul class="slider-list" id="slider">
+          <ul class="slider-list">
+            <li class="slider-header">
+                <span class="slider-count"></span>
+            </li>
             <li class="slider-item active">
-              <header class="slider-header">
-                <span class="slider-count">01</span>
-              </header>
               <div class="slider-wrap">
                 <img class="slider-pic" src="img/slider/slider-1.png" alt="" width="344" height="486">
                 <article class="slider-content">
@@ -124,9 +124,6 @@
               </div>
             </li>
             <li class="slider-item" >
-              <header class="slider-header">
-                <span class="slider-count">02</span>
-              </header>
               <div class="slider-wrap">
                 <img class="slider-pic" src="img/slider/slider-2.png" alt="" width="345" height="485">
                 <article class="slider-content">
@@ -147,9 +144,6 @@
               </div>
             </li>
             <li class="slider-item">
-              <header class="slider-header">
-                <span class="slider-count">03</span>
-              </header>
               <div class="slider-wrap">
                 <img class="slider-pic" src="img/slider/slider-3.png" alt="" width="526" height="334">
                 <article class="slider-content">
@@ -183,71 +177,73 @@
       <main class="page-main">
         <!-- PRODUCTS -->
         <section class="products-section">
-          <h2 class="hidden">
-          Наши товары
-          </h2>
-          <ul class="products-list">
-            <li class="product">
-              <a href="#">
-                <figure>
-                  <svg class="icon">
-                    <use xlink:href="#vr" />
-                  </svg>
-                  <figcaption class="product-name">Виртуальная реальность</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="product">
-              <a href="#">
-                <figure>
-                  <svg class="icon">
-                    <use xlink:href="#selfie-stick" />
-                  </svg>
-                  <figcaption class="product-name">Моноподы для селфи</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="product">
-              <a href="#">
-                <figure>
-                  <svg class="icon">
-                    <use xlink:href="#gopro" />
-                  </svg>
-                  <figcaption class="product-name">Экшн-камеры</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="product">
-              <a href="#">
-                <figure>
-                  <svg class="icon">
-                    <use xlink:href="#fitness-bracelet" />
-                  </svg>
-                  <figcaption class="product-name">Фитнес-браслеты</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="product">
-              <a href="#">
-                <figure>
-                  <svg class="icon">
-                    <use xlink:href="#apple-watch" />
-                  </svg>
-                  <figcaption class="product-name">Умные часы</figcaption>
-                </figure>
-              </a>
-            </li>
-            <li class="product">
-              <a href="#">
-                <figure>
-                  <svg class="icon">
-                    <use xlink:href="#drone" />
-                  </svg>
-                  <figcaption class="product-name">Квадрокоптеры</figcaption>
-                </figure>
-              </a>
-            </li>
-          </ul>
+          <div class="container">
+            <h2 class="hidden">
+            Наши товары
+            </h2>
+            <ul class="products-list">
+              <li class="product">
+                <a href="#">
+                  <div class="product-icon">
+                    <svg class="icon">
+                      <use xlink:href="#vr" />
+                    </svg>
+                  </div>
+                  <p class="product-name">Виртуальная реальность</p>
+                </a>
+              </li>
+              <li class="product">
+                <a href="#">
+                  <div class="product-icon">
+                    <svg class="icon">
+                      <use xlink:href="#selfie-stick" />
+                    </svg>
+                  </div>
+                  <p class="product-name">Моноподы для селфи</p>
+                </a>
+              </li>
+              <li class="product">
+                <a href="#">
+                  <div class="product-icon">
+                    <svg class="icon">
+                      <use xlink:href="#gopro" />
+                    </svg>
+                  </div>
+                  <p class="product-name">Экшн-камеры</p>
+                </a>
+              </li>
+              <li class="product">
+                <a href="#">
+                  <div class="product-icon">
+                    <svg class="icon">
+                      <use xlink:href="#fitness-bracelet" />
+                    </svg>
+                  </div>
+                  <p class="product-name">Фитнес-браслеты</p>
+                </a>
+              </li>
+              <li class="product">
+                <a href="#">
+                  <div class="product-icon">
+                    <svg class="icon">
+                      <use xlink:href="#apple-watch" />
+                    </svg>
+                  </div>
+                  <p class="product-name">Умные часы</p>
+                </a>
+              </li>
+              <li class="product">
+                <a href="#">
+                  <div class="product-icon">
+                    <svg class="icon">
+                      <use xlink:href="#drone" />
+                    </svg>
+                  </div>
+                  <p class="product-name">Квадрокоптеры</p>
+                </a>
+              </li>
+            </ul>
+          </div>
         </section>
         <!-- END PRODUCTS -->
         <!-- DELIVERY -->
@@ -299,22 +295,24 @@
       <!-- MAIN -->
       <!-- PARTNERS -->
       <section class="brands-section">
-        <h2 class="hidden">Бренды</h2>
-        <ul class="brands-list">
-          <li>
-            <a href="#" class="brand-link">
-            <img src="img/brands/logo-1.jpg" width="260" height="100" alt=""></a>
-          </li>
-          <li>
-            <a href="#" class="brand-link"><img src="img/brands/logo-2.jpg" width="260" height="100" alt=""></a>
-          </li>
-          <li>
-            <a href="#" class="brand-link"><img src="img/brands/logo-3.jpg" width="260" height="100" alt=""></a>
-          </li>
-          <li>
-            <a href="#" class="brand-link"><img src="img/brands/logo-4.jpg" width="260" height="100" alt=""></a>
-          </li>
-        </ul>
+        <div class="container">
+          <h2 class="hidden">Бренды</h2>
+          <ul class="brands-list">
+            <li>
+              <a href="#" class="brand-link">
+              <img src="img/brands/logo-1.jpg" width="260" height="100" alt=""></a>
+            </li>
+            <li>
+              <a href="#" class="brand-link"><img src="img/brands/logo-2.jpg" width="260" height="100" alt=""></a>
+            </li>
+            <li>
+              <a href="#" class="brand-link"><img src="img/brands/logo-3.jpg" width="260" height="100" alt=""></a>
+            </li>
+            <li>
+              <a href="#" class="brand-link"><img src="img/brands/logo-4.jpg" width="260" height="100" alt=""></a>
+            </li>
+          </ul>
+        </div>
       </section>
       <!-- END PARTNERS -->
       <!-- INFO -->

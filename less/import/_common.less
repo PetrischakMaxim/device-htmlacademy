@@ -220,15 +220,14 @@ body {
 .site-info {
 	display: grid;
 	grid-template-columns: 1fr 2fr 0fr;
-
 }
 
 /* SLider */
+
 .slider-block {
-	/* .container {
-		overflow: hidden;
-	} */
+	position: relative;
 }
+
 .slider-list {
 	position: relative;
 	height: 560px;
@@ -236,21 +235,8 @@ body {
 	margin: 0 auto;
 	overflow: hidden;
 }
-.slider-item {
-	top: 0;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
 
-	&.active {
-		opacity: 1;
-		-webkit-animation: fadeIn 0.5s ease-in;
-		animation: fadeIn 0.5s ease-in;
-	}
-
-	.slider-header {
+.slider-header {
 		position: relative;
 		z-index: -1;
 		height: 120px;
@@ -264,6 +250,7 @@ body {
 	.slider-count {
 		position: relative;
 		z-index: -1;
+		._trs();
 		&::after{
 			content:"";
 			position: absolute;
@@ -272,17 +259,32 @@ body {
 			width: 100%;
 			height: 7px;
 			background: @light_color;
-		}
 	}
+}
+
+.slider-item {
+	top: 120px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+
+	&.active {
+		opacity: 1;
+		-webkit-animation: fadeIn 0.5s ease-in;
+		animation: fadeIn 0.5s ease-in;
+	}
+
 	.slider-wrap {
 		padding: 0 60px;
 		display: grid;
-		grid-template-columns: 2fr 3fr;
+		grid-template-columns: 1fr 1fr;
 		grid-gap: 20px;
 	}
 	.slider-pic {
 		position: relative;
-		top: -100px;
+		top: -80px;
 	}
 	.slider-slogan  {
 		margin: -35px 0 0;
@@ -291,6 +293,7 @@ body {
 		line-height: 1;
 	}
 	.slider-button {
+		z-index: 3;
 		text-transform: uppercase;
 	}
 	.slider-features {
@@ -336,39 +339,33 @@ body {
 	}
 }
 
-
-
-.product-features {
-	text-align: center;
-	th {
-		font: 300 48px/1.33 @font_gilroy;
-	}
-}
+/*  Slider end  */
 
 /* Products */
+
+.products-list {
+	display: grid;
+	grid-gap: 40px;
+	grid-template-columns: repeat(6, 1fr);
+}
+
 .product {
-	width: 160px;
-	height: 160px;
-	background: @base_bg;
-	text-align: center;
-	._trs();
-
-	&:hover {
-		background: darken(@base_bg,25%);
-	}
-
-	&:active {
-		opacity: @opacity;
-	}
-
 	a {
 		display: block;
-		width: 100%;
-		height: 100%;
 	}
-	figure {
-		padding: 0;
-		margin: 0;
+	.product-icon {
+		width: 160px;
+		height: 160px;
+		background: @base_bg;
+		._trs();
+		text-align: center;
+		&:hover {
+			background: darken(@base_bg,25%);
+		}
+
+		&:active {
+			opacity: @opacity;
+		}
 	}
 	.product-name {
 		font: 900 18px/1.3 @font_gilroy;
@@ -380,9 +377,12 @@ body {
 
 /* Services */
 
-/* Partners */
+/* Brands */
 .brands-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 	.brand-link {
+		display: block;
 		filter: grayscale(1);
 		._trs();
 
@@ -391,6 +391,7 @@ body {
 		}
 	}
 }
+/* Brands end */
 
 /* Info */
 .info-services {

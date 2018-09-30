@@ -2,7 +2,15 @@
 
 document.addEventListener("DOMContentLoaded", function(event) { 
 
-var slideIndex = 0;
+
+/* SLIDER */
+
+var slideIndex = 0,
+	sliderCount = document.querySelector('.slider-count');
+
+var countNumbers = function (elem, indx) {
+	return elem.textContent = '0' + (indx + 1);
+}
 
 var showSlides = function (index) {
 	var slides = document.querySelectorAll('.slider-item'),
@@ -20,18 +28,22 @@ var showSlides = function (index) {
 	dots[slideIndex].classList.add('active');
 }
 
-
 document.querySelectorAll('.slider-dot').forEach(function(element){
 	element.addEventListener('click', function() {
 		var dots = Array.prototype.slice.call(this.parentElement.children),
 			dotIndex = dots.indexOf(element);
-
 			showSlides(slideIndex = dotIndex);
 	});
 });
 
+countNumbers(sliderCount,slideIndex);
+
 setInterval( function() {
   showSlides(++slideIndex);
-}, 3000);
+  countNumbers(sliderCount,slideIndex);
+}, 3500);
+
+/* END SLIDER */
+
 
 });
