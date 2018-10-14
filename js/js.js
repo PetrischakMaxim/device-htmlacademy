@@ -1,6 +1,13 @@
 'use strict';
 
 document.addEventListener("DOMContentLoaded", (event) => { 
+
+/* SHOW MENU */
+
+document.querySelector('.site-catalog-title').addEventListener('click', (e) => {
+    document.querySelector('.product-catalog').classList.toggle('active');
+});
+/***********/
     
 /* SLIDER */
 var slideIndex = 0,
@@ -63,19 +70,27 @@ var tabContents = document.querySelectorAll('.service-content');
 /* END TABS*/
 
 /* POPUP */
-var closeBtn = document.querySelector('.popup-btn');
-var contactBtn = document.querySelector('.contact-btn');
-var contactForm = document.querySelector('.popup-section');
+var closeBtn = document.querySelector('.popup-btn'),
+    contactBtn = document.querySelector('.contact-btn'),
+    contactForm = document.querySelector('.popup-section'),
+    mapBtn = document.querySelector('.map-link-trigger'),
+    mapCloseBtn = document.querySelector('.map-close-btn'),
+    mapContent = document.querySelector('.map-overlay');
 
-contactBtn.addEventListener('click', () => {
-    contactForm.classList.add('visible');
-});
+toggleContent(mapBtn,'click',mapContent,'visible');
+toggleContent(mapCloseBtn,'click',mapContent,'visible',false);
 
-closeBtn.addEventListener('click', () => {
-    contactForm.classList.remove('visible');
-});
+toggleContent(contactBtn,'click',contactForm,'visible');
+toggleContent(closeBtn,'click',contactForm,'visible',false);
+
+
+function toggleContent(elem,event,content,classState,flag = true) {
+    elem.addEventListener(event, () => {
+        if (flag) content.classList.add(classState);
+        else content.classList.remove(classState);
+    });
+}
 /* END POPUP */
-
 });
 
 

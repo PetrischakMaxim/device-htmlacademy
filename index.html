@@ -22,12 +22,12 @@
               <div class="search-block">
                 <form class="search-form">
                   <label class="search-form-label" for="#search-field">Поиск по сайту</label>
-                  <input class="search-form-input" id="#search-field" type="search" placeholder="Поиск по сайту" required>
-                  <button class="form-btn" type="submit">
-                  Найти
                   <svg class="icon">
                     <use xlink:href="#magnifier" />
                   </svg>
+                  <input class="search-form-input" id="#search-field" type="search" placeholder="Поиск по сайту" required>
+                  <button class="form-btn" type="submit">
+                  Найти
                   </button>
                 </form>
               </div>
@@ -65,8 +65,8 @@
                 <div class="site-catalog">
                   <a class="site-catalog-title" href="#">Каталог товаров <span></span></a>
                   <ul class="product-catalog">
-                    <li><a href="#">Виртуальная реальность   </a></li>
-                    <li><a href="#">Моноподы для селфи</a></li>
+                    <li><a href="#">Виртуальная реальность</a></li>
+                    <li><a href="catalog.html">Моноподы для селфи</a></li>
                     <li><a href="#">Экшн-камеры</a></li>
                     <li><a href="#">Фитнес-браслеты </a></li>
                     <li><a href="#">Умные часы</a></li>
@@ -444,9 +444,16 @@
         </form>
         <button class="popup-btn">Закрыть</button>
       </div>
-      
     </section>
     <!-- END POPUP WITH CONTACT FORM -->
+    <!-- MAP POPUP -->
+    <div class="map-overlay">
+      <div class="map-popup">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54562700.514130294!2d40.34456610385456!3d33.4169098029855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x453c569a896724fb%3A0x1409fdf86611f613!2z0KDQvtGB0YHQuNGP!5e0!3m2!1sru!2s!4v1539456948658" allowfullscreen></iframe>
+        <button class="popup-btn map-close-btn">Закрыть</button>
+      </div>
+    </div>
+    <!-- MAP POPUP -->
   </div>
   <!-- JAVASCRIPT -->
   <script src="js/js-dist.js"></script>
