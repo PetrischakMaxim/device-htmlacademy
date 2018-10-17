@@ -321,11 +321,6 @@ details {
 summary {
   display: list-item;
 }
-.page-wrapper {
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr;
-}
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0.4;
@@ -373,7 +368,10 @@ li {
 :-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
-.wrapper {
+.page-wrapper {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-rows: auto 1fr auto;
   overflow: hidden;
 }
 .hidden {
@@ -385,18 +383,18 @@ li {
   width: 1200px;
 }
 body {
-  font: 300 15px/2 'opensans', 'Arial', sans-serif;
   background: #ffffff;
   color: #000;
+  font: 300 15px/2 'opensans', 'Arial', sans-serif;
 }
 .thin-btn {
   position: relative;
-  padding: 10px 45px;
-  font: 900 18px/1.3 'gilroy', 'Arial', sans-serif;
-  text-align: center;
   background-color: transparent;
   border: none;
   outline: none;
+  padding: 10px 45px;
+  font: 900 18px/1.3 'gilroy', 'Arial', sans-serif;
+  text-align: center;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
@@ -405,12 +403,12 @@ body {
   z-index: -1;
   left: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
   content: "";
   width: 100%;
   height: 8px;
   background: #f5db7e;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   transition: all 0.5s ease-in-out;
 }
 .thin-btn:hover::after {
@@ -442,8 +440,8 @@ body {
   padding: 20px 0 0;
 }
 .page-header .container {
-  background: #f7e296;
   padding: 0 60px;
+  background: #f7e296;
 }
 .page-logo {
   position: relative;
@@ -479,11 +477,11 @@ body {
   display: flex;
 }
 .search-form .search-form-input {
-  font-size: 15px;
   padding-left: 30px;
   background-color: transparent;
   border: none;
   outline-color: #e3b511;
+  font-size: 15px;
 }
 .search-form .search-form-input::-webkit-input-placeholder {
   color: #000;
@@ -502,13 +500,13 @@ body {
   right: 0;
 }
 .search-form .form-btn {
-  opacity: 0;
-  right: -40%;
   position: relative;
-  font-size: 15px;
+  right: -40%;
   border: 1px solid #000;
   padding: 0px 5px;
   background-color: transparent;
+  font-size: 15px;
+  opacity: 0;
   transition: all 0.5s ease-in-out;
 }
 .search-form .icon {
@@ -539,16 +537,16 @@ body {
   position: relative;
   display: inline-flex;
   align-items: center;
-  font: 900 18px/1.3 'gilroy', 'Arial', sans-serif;
   margin-right: 30px;
+  font: 900 18px/1.3 'gilroy', 'Arial', sans-serif;
 }
 .site-catalog-title span {
+  position: relative;
+  left: 15px;
   display: block;
   background: #b8a974;
   height: 20px;
   width: 3px;
-  position: relative;
-  left: 15px;
 }
 .site-catalog-title span::after {
   content: "";
@@ -561,37 +559,33 @@ body {
   transform: translate(50%, -50%);
 }
 .product-catalog {
-  transition: all 1s ease;
   height: 0;
   opacity: 0;
+  transition: all 1s ease;
 }
 .product-catalog li {
-  margin-left: -10px;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flex;
-  display: -o-inline-flex;
   display: inline-flex;
+  margin-left: -10px;
 }
 .product-catalog a {
-  line-height: 1.8;
   padding: 10px;
+  line-height: 1.8;
 }
 .product-catalog.active {
-  opacity: 1;
   height: auto;
+  opacity: 1;
 }
 .site-info-list a {
   font: 900 18px/1.3 'gilroy', 'Arial', sans-serif;
 }
 .site-info {
   display: grid;
-  grid-template-columns: 1fr 2fr 0fr;
+  grid-template-columns: 2fr 3fr 1fr;
 }
 /* End Header */
 /* Main */
 .page-main {
-  padding: 50px 0;
+  padding: 20px 0;
 }
 /* End Main */
 /* SLider */
@@ -631,11 +625,11 @@ body {
   background: #ffffff;
 }
 .slider-item {
-  top: 120px;
-  left: 0;
   position: absolute;
   width: 100%;
   height: 100%;
+  top: 120px;
+  left: 0;
   opacity: 0;
 }
 .slider-item.active {
@@ -647,7 +641,7 @@ body {
   padding: 0 60px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 25px;
 }
 .slider-item .slider-pic {
   position: relative;
@@ -699,13 +693,13 @@ body {
   height: 6px;
   border: inherit;
   background-color: inherit;
-  border-radius: inherit;
+  border-radius: 100%;
 }
 /* End Slider  */
 /* Products */
 .products-list {
   display: grid;
-  grid-gap: 40px;
+  grid-gap: 25px;
   grid-template-columns: repeat(6, 1fr);
 }
 .product a {
@@ -734,8 +728,8 @@ body {
 /* Services */
 .services-section {
   background: #e5e5e5;
-  height: 300px;
-  margin-top: 200px;
+  min-height: 300px;
+  margin-top: 100px;
 }
 .services-tabs {
   position: relative;
@@ -779,6 +773,7 @@ body {
 .service-content .service-description,
 .service-content .icon {
   flex: 1 1 50%;
+  line-height: 1.4;
 }
 .service-content.is-visible {
   display: flex;
@@ -1040,7 +1035,7 @@ body {
   position: relative;
   font-size: 14px;
   font-weight: 300;
-  color: #a4a4a4;
+  color: #000;
 }
 .breadcrumbs-list a::after {
   content: "";
@@ -1055,7 +1050,7 @@ body {
   top: 10px;
 }
 .breadcrumbs-list a.current {
-  font-weight: bold;
+  font-weight: 900;
 }
 .breadcrumbs-list a.current::after {
   display: none;
@@ -1065,13 +1060,144 @@ body {
   background: #efefef;
 }
 .filter-header {
+  padding: 30px;
+  background: #dbdbdb;
   font: 900 14px/1.8 'gilroy', 'Arial', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.filter-form {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 25px;
+  padding: 0 25px;
 }
 .filter-form-field {
+  margin: 0;
+  padding: 0 0 25px 0;
+  border: 0;
+  overflow: hidden;
+  border-bottom: 2px solid #000;
   font: 900 18px/1.2 'gilroy', 'Arial', sans-serif;
 }
+.filter-form-field legend {
+  padding: 10px 0;
+}
+.range-controls {
+  position: relative;
+  margin: 10px auto;
+}
+.range-controls .scale {
+  height: 2px;
+  background-color: #dbdbdb;
+  border-radius: 1px;
+}
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background-color: #91c92f;
+}
+.range-controls .toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: content-box;
+  background: #ababab;
+  width: 5px;
+  height: 5px;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+.range-controls .toggle-min {
+  left: 0px;
+}
+.range-controls .toggle-max {
+  left: 150px;
+}
+.price-controls {
+  font-size: 0;
+}
+.price-controls label {
+  display: inline-flex;
+  align-items: center;
+  width: 50%;
+  font: 300 14px/1.5 'gilroy', 'Arial', sans-serif;
+}
+.price-controls input {
+  margin: 5px;
+  border: none;
+  background-color: transparent;
+  font: 300 14px/1.5 'gilroy', 'Arial', sans-serif;
+  width: 70%;
+}
+.filter-submit-btn {
+  z-index: 1;
+}
+/* Custom checkbox and radio */
 .filter-form-option {
   font: 300 14px/2.8 'gilroy', 'Arial', sans-serif;
+}
+.filter-form-option label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.filter-form-checkbox {
+  display: none;
+}
+.filter-form-checkbox:checked + .filter-form-checkbox-custom::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.filter-form-checkbox-custom {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  margin-right: 15px;
+}
+.filter-form-checkbox-custom::before {
+  content: "\2714";
+  font-size: 18px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.filter-form-radio {
+  display: none;
+}
+.filter-form-radio:checked + .filter-form-radio-custom::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+.filter-form-radio-custom {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border: 5px solid #000;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.filter-form-radio-custom::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #000;
+  width: 7.5px;
+  height: 7.5px;
+  border-radius: 100%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 /* Items section */
 .items-section {
@@ -1084,12 +1210,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 15px 0 0;
   background-color: #ebebeb;
 }
 .items-navigation .filter-header {
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  background-color: transparent;
 }
 .items-navigation-list {
   display: flex;
